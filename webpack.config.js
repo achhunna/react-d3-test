@@ -1,8 +1,13 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const extractSass = new ExtractTextPlugin({
+  filename: 'css/main.css',
+  allChunks: true
+});
 module.exports = {
-  entry: './jsx/app.jsx',
+  entry: ['./jsx/app.jsx', './scss/main.scss'],
   output: {
-    path: __dirname + '/js/',
-    filename: 'app.min.js'
+    path: __dirname,
+    filename: 'js/app.min.js'
   },
   module: {
     loaders: [
@@ -16,7 +21,15 @@ module.exports = {
           ],
           plugins: ["transform-object-rest-spread"]
         }
+      },
+      {
+        test: /\.(sass|scss)$/,
+        loader: extractSass.extract(['css-loader', 'sass-loader'])
       }
     ]
-  }
+  },
+  plugins: [
+    extractSass
+  ],
+
 }

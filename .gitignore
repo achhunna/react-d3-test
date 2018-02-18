@@ -11,5 +11,6 @@ npm-debug.log
 Dockerfile
 docker-compose.yml
 
-# Transformed JS from JSX
+# Transformed JS and CSS
 js/app.min.js
+css/main.css
