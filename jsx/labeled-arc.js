@@ -9,7 +9,7 @@ class LabeledArc extends Arc {
     return (
       <g>
         {super.render()}
-        <text transform={`${labelTranslate} rotate(10)`}
+        <text transform={`${labelTranslate}`}
               textAnchor="middle">
           {this.props.data.data.label}
         </text>
