@@ -14,7 +14,7 @@ class D3Test extends React.Component {
         </div>
         <div className="chart-container">
           <svg width={WIDTH} height={HEIGHT}>
-            <PieChart x={WIDTH / 2} y={HEIGHT / 2} outerRadius={WIDTH / 3} innerRadius={0}
+            <PieChart x={WIDTH / 2} y={HEIGHT / 2} outerRadius={WIDTH / 4} innerRadius={0}
                       data={[
                         {value: 50, label: 'One'},
                         {value: 50, label: 'Two'},
